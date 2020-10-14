@@ -46,8 +46,7 @@
       (src_type|lower) == "copy"
   
   - name: "Copy the file {{imagefile}} from the server {{ src_image }} to end point {{ dest_image }}. Command executed: scp {{ src_image }} {{ dest_image }}"
-    shell: 
-      cmd: scp {{ src_image }} {{ dest_image }}
+    shell: scp {{ src_image }} {{ dest_image }} 
     when:
       (src_type|lower) == "remote"
 
