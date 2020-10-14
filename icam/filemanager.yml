@@ -45,8 +45,8 @@
     when:
       (src_type|lower) == "copy"
   
-  - name: "Copy teh file {{imagefile}} from the server to end point {{ dest_image }}"
-    shell: "scp divya_mallya86_gmail_com@35.224.19.228:/home/divya_mallya86_gmail_com/images/cp4mcm_Agents_xlinux_2.0.tar.gz {{ dest_image }}/{{imagefile}}"
+  - name: "Copy the file {{imagefile}} from the server {{ src_image }} to end point {{ dest_image }}"
+    shell: "scp {{ src_image }} {{ dest_image }}"
     when:
       (src_type|lower) == "remote"
 
